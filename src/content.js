@@ -2,20 +2,21 @@
 // Single source of truth for site content.
 // Swap names, text and images here — components just render this.
 //
-// Images currently point to picsum.photos placeholders (seeded, so
-// they stay stable across reloads). To use real photos: drop the
-// file in /public/images/ and change the URL below to e.g.
-// "/images/hero.jpg".
+// Images currently point to real Unsplash photos chosen to match
+// each section's subject (team, code, servers, dashboards, etc.),
+// and testimonial avatars use randomuser.me portraits. To use your
+// own photos: drop the file in /public/images/ and change the URL
+// below to e.g. "/images/hero.jpg".
 // ────────────────────────────────────────────────────────────────
 
-const placeholder = (seed, w, h) => `https://picsum.photos/seed/${seed}/${w}/${h}`
+const unsplash = (id, w, h) => `https://images.unsplash.com/photo-${id}?w=${w}&h=${h}&fit=crop&q=80`
 
 export const company = {
   name: 'Bravix',
   shortName: 'Bravix',
   tagline: 'Software, crafted with intent.',
-  email: 'hello@bravix.co',
-  phone: '+255 700 000 000',
+  email: 'us@support.akiliunde.com',
+  phone: '+255 696 683 636',
   location: 'Dar es Salaam, Tanzania',
 }
 
@@ -33,7 +34,7 @@ export const hero = {
     'Bravix is a small, senior team of engineers and designers who partner with founders and companies to design, build and ship reliable digital products — from web platforms to mobile apps and cloud infrastructure.',
   primaryCta: { label: 'Start a project', href: '#contact' },
   secondaryCta: { label: 'See our work', href: '#work' },
-  image: placeholder('bravix-hero', 1200, 900),
+  image: unsplash('1522071820081-009f0129c71c', 1200, 900), // team collaborating around a table
 }
 
 export const stats = [
@@ -48,25 +49,25 @@ export const services = [
     title: 'Web Platforms',
     description:
       'Fast, accessible web applications built on modern frameworks — from marketing sites to complex internal tools.',
-    image: placeholder('bravix-web', 800, 600),
+    image: unsplash('1461749280684-dccba630e2f6', 800, 600), // laptop showing code editor
   },
   {
     title: 'Mobile Apps',
     description:
       'Native-feeling iOS and Android apps, built cross-platform to ship faster without cutting quality.',
-    image: placeholder('bravix-mobile', 800, 600),
+    image: unsplash('1512941937669-90a1b58e7e9c', 800, 600), // hand holding a phone
   },
   {
     title: 'Cloud & DevOps',
     description:
       'Scalable infrastructure, CI/CD pipelines and observability so your product stays fast and reliable as you grow.',
-    image: placeholder('bravix-cloud', 800, 600),
+    image: unsplash('1544197150-b99a580bb7a8', 800, 600), // server room / data center
   },
   {
     title: 'Product Design',
     description:
       'Research-driven UI/UX design that turns complex workflows into interfaces people enjoy using.',
-    image: placeholder('bravix-design', 800, 600),
+    image: unsplash('1559028006-448665bd7c7f', 800, 600), // UI/UX design tools on a desk
   },
 ]
 
@@ -75,7 +76,7 @@ export const projects = [
     title: 'Nexora Finance',
     category: 'Web App · Fintech',
     description: 'A dashboard for SMEs to manage invoicing, payroll and cash flow in one place.',
-    image: placeholder('bravix-project-1', 900, 700),
+    image: unsplash('1551288049-bebda4e38f71', 900, 700), // finance analytics dashboard
     tags: ['React', 'Node.js', 'PostgreSQL'],
     link: '#',
   },
@@ -83,7 +84,7 @@ export const projects = [
     title: 'Harbor Logistics',
     category: 'Mobile App · Logistics',
     description: 'Real-time fleet tracking and delivery management for a regional logistics company.',
-    image: placeholder('bravix-project-2', 900, 700),
+    image: unsplash('1601584115197-04ecc0da31d7', 900, 700), // delivery truck / logistics
     tags: ['React Native', 'Go', 'Maps API'],
     link: '#',
   },
@@ -91,7 +92,7 @@ export const projects = [
     title: 'Clinix Health',
     category: 'Web Platform · Healthcare',
     description: 'Patient scheduling and records platform used by clinics across three countries.',
-    image: placeholder('bravix-project-3', 900, 700),
+    image: unsplash('1576091160399-112ba8d25d1d', 900, 700), // doctor with technology
     tags: ['Next.js', 'PostgreSQL', 'AWS'],
     link: '#',
   },
@@ -99,9 +100,9 @@ export const projects = [
     title: 'Marketplace OS',
     category: 'E-commerce · Cloud',
     description: 'Multi-vendor marketplace infrastructure handling thousands of daily transactions.',
-    image: placeholder('bravix-project-4', 900, 700),
+    image: unsplash('1556742049-0cfed4f6a45d', 900, 700), // warehouse packages / e-commerce
     tags: ['Django', 'React', 'Stripe'],
-    link: '#',
+    link: 'https://dukagro.akiliunde.com/',
   },
 ]
 
@@ -111,21 +112,21 @@ export const testimonials = [
       'Bravix rebuilt our platform from the ground up and it just works. Communication was clear from day one and they shipped ahead of schedule.',
     name: 'Amara Kessy',
     role: 'CEO, Nexora Finance',
-    avatar: placeholder('bravix-avatar-1', 200, 200),
+    avatar: 'https://randomuser.me/api/portraits/women/44.jpg',
   },
   {
     quote:
       'The team feels like an extension of ours. They understand the business, not just the code.',
     name: 'David Mrema',
     role: 'COO, Harbor Logistics',
-    avatar: placeholder('bravix-avatar-2', 200, 200),
+    avatar: 'https://randomuser.me/api/portraits/men/32.jpg',
   },
   {
     quote:
       'Reliable, fast, and genuinely good design instincts. Exactly what we needed for a healthcare product.',
     name: 'Sofia Peters',
     role: 'Founder, Clinix Health',
-    avatar: placeholder('bravix-avatar-3', 200, 200),
+    avatar: 'https://randomuser.me/api/portraits/women/68.jpg',
   },
 ]
 
@@ -133,5 +134,6 @@ export const socials = [
   { label: 'GitHub', href: 'https://github.com' },
   { label: 'LinkedIn', href: 'https://linkedin.com' },
   { label: 'X', href: 'https://x.com' },
-  { label: 'Instagram', href: 'https://instagram.com' },
+  { label: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61594500832000' },
+  { label: 'Instagram', href: 'https://www.instagram.com/bravetechteam/' },
 ]
