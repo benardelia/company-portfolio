@@ -73,6 +73,15 @@ export const services = [
 
 export const projects = [
   {
+    title: 'Fursanest',
+    category: 'Web Platform · Careers',
+    description:
+      'An opportunities hub for East Africa — jobs, internships, tenders, scholarships and fellowships, with job alerts and paid listings for advertisers.',
+    image: unsplash('1486312338219-ce68d2c6f44d', 900, 700), // person browsing on a laptop
+    tags: ['Job Board', 'Tenders', 'Job Alerts'],
+    link: 'https://fursanest.akiliunde.com/',
+  },
+  {
     title: 'Nexora Finance',
     category: 'Web App · Fintech',
     description: 'A dashboard for SMEs to manage invoicing, payroll and cash flow in one place.',
