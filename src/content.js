@@ -31,7 +31,7 @@ export const hero = {
   eyebrow: 'Software Development Studio',
   title: 'We build software that moves your business forward.',
   subtitle:
-    'Bravix is a small, senior team of engineers and designers who partner with founders and companies to design, build and ship reliable digital products — from web platforms to mobile apps and cloud infrastructure.',
+    'Bravix is a small, senior team of engineers and designers who partner with founders and companies to design, build and ship reliable digital products — from web platforms and mobile apps to AI models, automation and cloud infrastructure.',
   primaryCta: { label: 'Start a project', href: '#contact' },
   secondaryCta: { label: 'See our work', href: '#work' },
   image: unsplash('1522071820081-009f0129c71c', 1200, 900), // team collaborating around a table
@@ -69,6 +69,18 @@ export const services = [
       'Research-driven UI/UX design that turns complex workflows into interfaces people enjoy using.',
     image: unsplash('1559028006-448665bd7c7f', 800, 600), // UI/UX design tools on a desk
   },
+  {
+    title: 'AI Models & Training',
+    description:
+      'Custom machine learning models designed, trained and deployed on your data — from computer vision to language and prediction.',
+    image: unsplash('1677442136019-21780ecad995', 800, 600), // abstract "AI" render
+  },
+  {
+    title: 'Automation & Chatbots',
+    description:
+      'WhatsApp and Telegram bots and workflow automations that handle customer messages, orders and repetitive tasks around the clock.',
+    image: unsplash('1611746872915-64382b5c76da', 800, 600), // phone with WhatsApp and Telegram apps
+  },
 ]
 
 export const projects = [
@@ -80,6 +92,15 @@ export const projects = [
     image: unsplash('1486312338219-ce68d2c6f44d', 900, 700), // person browsing on a laptop
     tags: ['Job Board', 'Tenders', 'Job Alerts'],
     link: 'https://fursanest.akiliunde.com/',
+  },
+  {
+    title: 'ScribeSign AI',
+    category: 'AI · Accessibility',
+    description:
+      'A real-time sign language translator that reads signs from a webcam and turns them into spoken English sentences, with built-in dataset and model training tools.',
+    image: unsplash('1773800924117-a387786c60a0', 900, 700), // sign language alphabet poster
+    tags: ['MediaPipe', 'LSTM', 'Computer Vision'],
+    link: 'https://scribesign.akiliunde.com/',
   },
   {
     title: 'Nexora Finance',
